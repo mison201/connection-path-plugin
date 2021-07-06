@@ -12,8 +12,7 @@ function install(editor, { type, transformer, arrow, curve, options = {} }) {
     if (!Transformer[type]) throw new Error(`transformer with type ${type} doesn't exist`);
     
     editor.on('connectionpath', data => {
-        const { points } = data;
-        const factory = new PathFactory(points, curve);
+        const factory = new PathFactory(data.points, curve);
 
         data.d = factory.getData(transformer || Transformer[type], options, data);
     });

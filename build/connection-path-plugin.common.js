@@ -125,7 +125,7 @@ function () {
     }
   }, {
     key: "getData",
-    value: function getData(transformer, options) {
+    value: function getData(transformer, options, data) {
       return this.line(transformer(options, data));
     }
   }]);
@@ -258,8 +258,7 @@ function install(editor, _ref) {
   if (transformer && typeof transformer !== 'function') throw new Error('transformer property must be a function');
   if (!Transformer[type]) throw new Error("transformer with type ".concat(type, " doesn't exist"));
   editor.on('connectionpath', function (data) {
-    var points = data.points;
-    var factory = new PathFactory(points, curve);
+    var factory = new PathFactory(data.points, curve);
     data.d = factory.getData(transformer || Transformer[type], options, data);
   });
 

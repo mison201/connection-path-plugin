@@ -18,7 +18,7 @@ export default {
 
         return [p1, p2, p3, p4];
     },
-    VERTICAL_COMBO: ({ curvature = 0.4 },data) => ([x1, y1, x2, y2]) => {
+    VERTICAL_COMBO: ({ curvature = 0.4 }, data) => ([x1, y1, x2, y2]) => {
         const p1 = [x1, y1];
         const p4 = [x2, y2];
         let vertical_l=false

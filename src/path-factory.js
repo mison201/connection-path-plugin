@@ -17,7 +17,7 @@ export class PathFactory {
             (points)
     }
 
-    getData(transformer, options) {
-        return this.line(transformer(options,data));
+    getData(transformer, options, data) {
+        return this.line(transformer(options, data));
     }
 }
