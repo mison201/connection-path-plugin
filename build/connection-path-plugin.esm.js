@@ -189,6 +189,9 @@ var Transformer = {
       var vertical_r = false;
 
       if (data.connection) {
+        console.log("data.connection.input :>> ", data.connection.input);
+        console.log("data.connection.output :>> ", data.connection.output);
+
         if (data.connection.input.vertical) {
           vertical_r = true;
         }
