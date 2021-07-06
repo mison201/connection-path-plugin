@@ -32,6 +32,7 @@ export default {
       const p4 = [x2, y2]
       let vertical_l = false
       let vertical_r = false
+      console.log("data :>> ", data)
       if (data.connection) {
         console.log("data.connection.input :>> ", data.connection.input)
         console.log("data.connection.output :>> ", data.connection.output)

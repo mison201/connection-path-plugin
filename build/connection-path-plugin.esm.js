@@ -187,6 +187,7 @@ var Transformer = {
       var p4 = [x2, y2];
       var vertical_l = false;
       var vertical_r = false;
+      console.log("data :>> ", data);
 
       if (data.connection) {
         console.log("data.connection.input :>> ", data.connection.input);
