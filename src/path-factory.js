@@ -18,6 +18,6 @@ export class PathFactory {
     }
 
     getData(transformer, options) {
-        return this.line(transformer(options));
+        return this.line(transformer(options,data));
     }
 }

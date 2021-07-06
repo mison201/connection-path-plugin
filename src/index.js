@@ -15,7 +15,7 @@ function install(editor, { type, transformer, arrow, curve, options = {} }) {
         const { points } = data;
         const factory = new PathFactory(points, curve);
 
-        data.d = factory.getData(transformer || Transformer[type], options);
+        data.d = factory.getData(transformer || Transformer[type], options, data);
     });
 
     if (arrow) {
